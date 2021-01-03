@@ -1,9 +1,7 @@
-# Rails chat application
-Code of the rails chat tutorial for jruby from [iridakos.com]
+# Rails chat application for jruby
+Code of the rails chat tutorial from [iridakos.com],modify for jruby 9.2.14.0
 
 # MIT License
-
-Copyright (c) 2019 Lazarus Lazaridis
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -23,7 +21,10 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-for vendor/bundle/ 
+use bund.sh for bundle install 
+  bundle config set --local path 'vendor/bundle'
+  jruby -J-Xmx1024m -S  bundle  install --path vendor/bundle
+
 
 jgem install bundler --source 'http://gems.ruby-china.com'
 jgem install rake --source 'http://gems.ruby-china.com'
@@ -34,8 +35,11 @@ database.yml
 	#pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 	pool:  15
 
-Gemfile
+Gemfile add 
 gem 'activerecord-jdbc-adapter'
 gem 'activerecord-jdbcsqlite3-adapter'
-
 gem 'rubyzip','~> 1.3.0'
+
+myrails.sh
+ jruby -J-Xmx1024m -S bundle exec rails s --binding=0.0.0.0 -p=3001
+
