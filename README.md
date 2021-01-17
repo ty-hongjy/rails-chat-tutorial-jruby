@@ -1,6 +1,6 @@
 # Rails chat application for jruby
-Code of the rails chat tutorial from [iridakos.com],modify for jruby 9.2.14.0
-
+Code of the rails chat tutorial from [iridakos.com],modify for jruby 9.2.14.0 .
+rails version is 5.2.4.2.
 # MIT License
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -43,4 +43,6 @@ gem 'rubyzip','~> 1.3.0'
 
 myrails.sh
  jruby -J-Xmx1024m -S bundle exec rails s --binding=0.0.0.0 -p=3001
+
+it need support by nodejs version 8.0.0 up
 
