@@ -21,7 +21,8 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-use bund.sh for bundle install 
+# Modify for jruby
+use bund.sh for bundle install under local path vendle 
   bundle config set --local path 'vendor/bundle'
   jruby -J-Xmx1024m -S  bundle  install --path vendor/bundle
 
