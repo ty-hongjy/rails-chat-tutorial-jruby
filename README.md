@@ -26,7 +26,8 @@ SOFTWARE.
     jgem install bundler --source 'http://gems.ruby-china.com'
     jgem install rake --source 'http://gems.ruby-china.com'
     jgem install rubyzip --source 'http://gems.ruby-china.com'
-    jruby -S warble config
+ 	jgem install warbler --source 'http://gems.ruby-china.com'
+ 	jruby -S warble config
 ```
 use bund.sh for bundle install under local path vendle 
 ```bash
