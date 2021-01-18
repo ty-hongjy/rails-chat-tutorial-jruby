@@ -26,10 +26,11 @@ SOFTWARE.
     jgem install bundler --source 'http://gems.ruby-china.com'
     jgem install rake --source 'http://gems.ruby-china.com'
     jgem install rubyzip --source 'http://gems.ruby-china.com'
- 	jgem install warbler --source 'http://gems.ruby-china.com'
- 	jruby -S warble config
-```
-use bund.sh for bundle install under local path vendle 
+    jgem install warbler --source 'http://gems.ruby-china.com'
+    jruby -S warble config
+    jruby -J-Xmx1024m -S warble
+   ```
+use bund.sh for bundle install under local path vendor
 ```bash
     bundle config set --local path 'vendor/bundle'
     jruby -J-Xmx1024m -S  bundle  install --path vendor/bundle
