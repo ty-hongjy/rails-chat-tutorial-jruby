@@ -1,5 +1,5 @@
 # Rails chat application for jruby
-Code of the rails chat tutorial from [iridakos.com],modify for jruby 9.2.14.0 .
+Code of the rails chat tutorial for jruby from [iridakos.com],modify for jruby 9.2.14.0 .
 rails version is 5.2.4.2.
 # MIT License
 
