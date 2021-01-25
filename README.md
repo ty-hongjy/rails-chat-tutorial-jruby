@@ -36,7 +36,7 @@ use bund.sh for bundle install under local path vendle
 database.yml
 ```yaml
 #pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-	pool:  15
+    pool:  15
 ```
 Gemfile add 
 ```ruby
