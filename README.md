@@ -33,20 +33,17 @@ use bund.sh for bundle install under local path vendle
     bundle config set --local path 'vendor/bundle'
     jruby -J-Xmx1024m -S  bundle  install --path vendor/bundle
 ```
-
 database.yml
 ```yaml
 #pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 	pool:  15
 ```
-
 Gemfile add 
 ```ruby
     gem 'activerecord-jdbc-adapter'
     gem 'activerecord-jdbcsqlite3-adapter'
     gem 'rubyzip','~> 1.3.0'
 ```
-
 myrails.sh
 ```shell
     jruby -J-Xmx1024m -S bundle exec rails s --binding=0.0.0.0 -p=3001
