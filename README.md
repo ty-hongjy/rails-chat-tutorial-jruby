@@ -1,5 +1,5 @@
 # Rails chat application for jruby
-Code of the rails chat tutorial for jruby from [iridakos.com],modify for jruby 9.2.14.0 .
+Code of the rails chat tutorial for jruby is from [iridakos.com],modify for jruby 9.2.14.0 .
 rails version is 5.2.4.2.
 # MIT License
 
@@ -22,27 +22,33 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 # Modify for jruby
+```bash
+    jgem install bundler --source 'http://gems.ruby-china.com'
+    jgem install rake --source 'http://gems.ruby-china.com'
+    jgem install rubyzip --source 'http://gems.ruby-china.com'
+    jruby -S warble config
+```
 use bund.sh for bundle install under local path vendle 
-  bundle config set --local path 'vendor/bundle'
-  jruby -J-Xmx1024m -S  bundle  install --path vendor/bundle
-
-
-jgem install bundler --source 'http://gems.ruby-china.com'
-jgem install rake --source 'http://gems.ruby-china.com'
-jgem install rubyzip --source 'http://gems.ruby-china.com'
-jruby -S warble config
+```bash
+    bundle config set --local path 'vendor/bundle'
+    jruby -J-Xmx1024m -S  bundle  install --path vendor/bundle
+```
 
 database.yml
-	#pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+```yaml
+#pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 	pool:  15
+```
 
 Gemfile add 
-gem 'activerecord-jdbc-adapter'
-gem 'activerecord-jdbcsqlite3-adapter'
-gem 'rubyzip','~> 1.3.0'
+```ruby
+    gem 'activerecord-jdbc-adapter'
+    gem 'activerecord-jdbcsqlite3-adapter'
+    gem 'rubyzip','~> 1.3.0'
+```
 
 myrails.sh
- jruby -J-Xmx1024m -S bundle exec rails s --binding=0.0.0.0 -p=3001
-
+```shell
+    jruby -J-Xmx1024m -S bundle exec rails s --binding=0.0.0.0 -p=3001
+```
 it need support by nodejs version 8.0.0 up
-
